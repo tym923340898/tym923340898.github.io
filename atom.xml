@@ -6,7 +6,7 @@
   <link href="/tym923340898.github.io/atom.xml" rel="self"/>
   
   <link href="https://tym923340898.github.io/"/>
-  <updated>2019-07-25T18:59:28.374Z</updated>
+  <updated>2019-07-31T07:16:34.654Z</updated>
   <id>https://tym923340898.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://tym923340898.github.io/2019/07/31/test/"/>
+    <id>https://tym923340898.github.io/2019/07/31/test/</id>
+    <published>2019-07-31T07:16:11.000Z</published>
+    <updated>2019-07-31T07:16:34.654Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello Word</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hello Word&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="https://tym923340898.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>python3基于百度开放平台和图灵机器人的语音助手</title>
