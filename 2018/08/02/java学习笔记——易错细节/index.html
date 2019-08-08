@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="java学习笔记">
+<meta name="description" content="Java学习笔记（易错细节）持续更新">
 <meta name="keywords" content="学习笔记,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java学习笔记——易错细节">
 <meta property="og:url" content="http://tymgo.top/2018/08/02/java学习笔记——易错细节/index.html">
 <meta property="og:site_name" content="To be.">
-<meta property="og:description" content="java学习笔记">
+<meta property="og:description" content="Java学习笔记（易错细节）持续更新">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-07T09:07:40.803Z">
+<meta property="og:updated_time" content="2019-08-08T11:52:05.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java学习笔记——易错细节">
-<meta name="twitter:description" content="java学习笔记">
+<meta name="twitter:description" content="Java学习笔记（易错细节）持续更新">
 
 
 
@@ -412,9 +412,9 @@
       
 
       
-        <p>java学习笔记</p>
-<a id="more"></a>
-<h1 id="Java学习笔记（易错细节）"><a href="#Java学习笔记（易错细节）" class="headerlink" title="Java学习笔记（易错细节）"></a><strong>Java</strong>学习笔记（易错细节）</h1><h2 id="逻辑运算符（-amp-单个双个区别）"><a href="#逻辑运算符（-amp-单个双个区别）" class="headerlink" title="逻辑运算符（&amp;|单个双个区别）"></a>逻辑运算符（&amp;|单个双个区别）</h2><table>
+        <h2 id="Java学习笔记（易错细节）持续更新"><a href="#Java学习笔记（易错细节）持续更新" class="headerlink" title="Java学习笔记（易错细节）持续更新"></a><strong>Java</strong>学习笔记（易错细节）持续更新</h2><a id="more"></a>
+
+<h3 id="逻辑运算符（-amp-单个双个区别）"><a href="#逻辑运算符（-amp-单个双个区别）" class="headerlink" title="逻辑运算符（&amp;|单个双个区别）"></a>逻辑运算符（&amp;|单个双个区别）</h3><table>
 <thead>
 <tr>
 <th>逻辑运算符</th>
@@ -438,7 +438,7 @@
 <td align="center">运算两端任意一段为true,结果为true,只有两端都为false,结果为false</td>
 </tr>
 </tbody></table>
-<h2 id="自增自减区分"><a href="#自增自减区分" class="headerlink" title="自增自减区分"></a>自增自减区分</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">+</span><span class="literal">+</span><span class="comment">x</span></span><br></pre></td></tr></table></figure>
+<h3 id="自增自减区分"><a href="#自增自减区分" class="headerlink" title="自增自减区分"></a>自增自减区分</h3><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">+</span><span class="literal">+</span><span class="comment">x</span></span><br></pre></td></tr></table></figure>
 
 <p>先自增再赋值</p>
 <figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">x</span><span class="literal">+</span><span class="literal">+</span></span><br></pre></td></tr></table></figure>
@@ -454,7 +454,7 @@
 <p>输出结果为 2</p>
 </li>
 </ul>
-<h2 id="数组的操作"><a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h2><h3 id="数组扩容："><a href="#数组扩容：" class="headerlink" title="数组扩容："></a>数组扩容：</h3><ul>
+<h3 id="数组的操作"><a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h3><h4 id="数组扩容："><a href="#数组扩容：" class="headerlink" title="数组扩容："></a>数组扩容：</h4><ul>
 <li><h4 id="arraycopy数组复制"><a href="#arraycopy数组复制" class="headerlink" title="arraycopy数组复制"></a>arraycopy数组复制</h4><p>  与使用for循环遍历复制数组相比，arraycopy更加灵活，可以针对数组的位置进行复制</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.arraycopy(src, srcPos, dest, destPos, length);</span><br></pre></td></tr></table></figure>
 
@@ -464,7 +464,40 @@
 
 <p>  输出结果为：<code>[5, 7, 9, 2, 0, 0]</code></p>
 </li>
+<li><h4 id="Arrays-copyOf数组复制"><a href="#Arrays-copyOf数组复制" class="headerlink" title="Arrays.copyOf数组复制"></a>Arrays.copyOf数组复制</h4><p>只能从第零个元素开始复制，且无法控制复制位置，但相对简洁，参数少，视情况使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arrays.copyOf(original, newLength);</span><br></pre></td></tr></table></figure>
+
+<p>original：源数组<br>newLength：复制元素的个数<br>例如：</p>
+</li>
 </ul>
+<pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span>[] arr1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">int</span>[] arr2=Arrays.copyOf(arr1,<span class="number">2</span>);</span><br><span class="line"><span class="keyword">int</span>[] arr3=Arrays.copyOf(arr1,<span class="number">9</span>);</span><br><span class="line">System.out.println(Arrays.toString(arr2));</span><br><span class="line">System.out.println(Arrays.toString(arr3));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+输出结果为
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure></code></pre><ul>
+<li><h4 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">功能强大,使用灵活</span><br><span class="line">参数多,容易发生异常</span><br><span class="line">	需要较复杂的数组复制时使用</span><br><span class="line">	```Arrays.copyOf()</span><br></pre></td></tr></table></figure>
+
+<p>   参数少,没有异常</p>
+<pre><code>功能有限,需要import
+需要普通的数组扩容,缩容时使用</code></pre></li>
+</ul>
+<h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><ul>
+<li><h4 id="Arrays-sort排序"><a href="#Arrays-sort排序" class="headerlink" title="Arrays.sort排序"></a>Arrays.sort排序</h4><p>  简洁排序，结果为<strong>升序</strong></p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort();<span class="comment">//括号内为数组名</span></span><br></pre></td></tr></table></figure>
+
+<p>  例如：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span>[] arr1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line">Arrays.sort(arr1);</span><br><span class="line">System.out.println(Arrays.toString(arr1));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  输出结果为：<code>[1, 2, 4, 5, 6, 7]</code></p>
+</li>
+<li><h4 id="降序-冒泡"><a href="#降序-冒泡" class="headerlink" title="降序(冒泡)"></a>降序(冒泡)</h4>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=i+<span class="number">1</span>;k&lt;arr.length;k++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i]&lt;=arr[k]) &#123;</span><br><span class="line">				temp=arr[i];</span><br><span class="line">				arr[i]=arr[k];</span><br><span class="line">				arr[k]=temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(Arrays.toString(arr));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  输出结果为：<code>[7, 6, 5, 4, 2, 1]</code></p>
+</li>
+<li><h4 id="更多（陆续更新）"><a href="#更多（陆续更新）" class="headerlink" title="更多（陆续更新）"></a>更多（陆续更新）</h4><p>  留白</p>
+</li>
+</ul>
+<hr>
+<p>  陆续更新</p>
 
       
     </div>
@@ -674,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java学习笔记（易错细节）"><span class="nav-number">1.</span> <span class="nav-text">Java学习笔记（易错细节）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符（-amp-单个双个区别）"><span class="nav-number">1.1.</span> <span class="nav-text">逻辑运算符（&amp;|单个双个区别）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自增自减区分"><span class="nav-number">1.2.</span> <span class="nav-text">自增自减区分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的操作"><span class="nav-number">1.3.</span> <span class="nav-text">数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组扩容："><span class="nav-number">1.3.1.</span> <span class="nav-text">数组扩容：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#arraycopy数组复制"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">arraycopy数组复制</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java学习笔记（易错细节）持续更新"><span class="nav-number">1.</span> <span class="nav-text">Java学习笔记（易错细节）持续更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符（-amp-单个双个区别）"><span class="nav-number">1.1.</span> <span class="nav-text">逻辑运算符（&amp;|单个双个区别）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自增自减区分"><span class="nav-number">1.2.</span> <span class="nav-text">自增自减区分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的操作"><span class="nav-number">1.3.</span> <span class="nav-text">数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组扩容："><span class="nav-number">1.3.1.</span> <span class="nav-text">数组扩容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arraycopy数组复制"><span class="nav-number">1.3.2.</span> <span class="nav-text">arraycopy数组复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Arrays-copyOf数组复制"><span class="nav-number">1.3.3.</span> <span class="nav-text">Arrays.copyOf数组复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比"><span class="nav-number">1.3.4.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组排序"><span class="nav-number">1.4.</span> <span class="nav-text">数组排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Arrays-sort排序"><span class="nav-number">1.4.1.</span> <span class="nav-text">Arrays.sort排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降序-冒泡"><span class="nav-number">1.4.2.</span> <span class="nav-text">降序(冒泡)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多（陆续更新）"><span class="nav-number">1.4.3.</span> <span class="nav-text">更多（陆续更新）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
