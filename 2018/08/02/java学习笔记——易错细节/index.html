@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="To be.">
 <meta property="og:description" content="Java学习笔记（易错细节）持续更新">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-08T11:52:05.570Z">
+<meta property="og:updated_time" content="2019-08-12T11:58:08.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java学习笔记——易错细节">
 <meta name="twitter:description" content="Java学习笔记（易错细节）持续更新">
@@ -412,7 +412,7 @@
       
 
       
-        <h2 id="Java学习笔记（易错细节）持续更新"><a href="#Java学习笔记（易错细节）持续更新" class="headerlink" title="Java学习笔记（易错细节）持续更新"></a><strong>Java</strong>学习笔记（易错细节）持续更新</h2><a id="more"></a>
+        <h3 id="Java学习笔记（易错细节）持续更新"><a href="#Java学习笔记（易错细节）持续更新" class="headerlink" title="Java学习笔记（易错细节）持续更新"></a><strong>Java</strong>学习笔记（易错细节）持续更新</h3><a id="more"></a>
 
 <h3 id="逻辑运算符（-amp-单个双个区别）"><a href="#逻辑运算符（-amp-单个双个区别）" class="headerlink" title="逻辑运算符（&amp;|单个双个区别）"></a>逻辑运算符（&amp;|单个双个区别）</h3><table>
 <thead>
@@ -496,8 +496,34 @@
 <li><h4 id="更多（陆续更新）"><a href="#更多（陆续更新）" class="headerlink" title="更多（陆续更新）"></a>更多（陆续更新）</h4><p>  留白</p>
 </li>
 </ul>
-<hr>
-<p>  陆续更新</p>
+<h3 id="OOP面向对象编程（转）"><a href="#OOP面向对象编程（转）" class="headerlink" title="OOP面向对象编程（转）"></a>OOP面向对象编程（转）</h3><p>参考：<br><a href="http://c.biancheng.net/view/939.html" target="_blank" rel="noopener">Java面向对象：对象的概念及面向对象的三个基本特征</a></p>
+<h4 id="梗概："><a href="#梗概：" class="headerlink" title="梗概："></a>梗概：</h4><p>面向对象简称 OO（Object Oriented），20 世纪 80 年代以后，有了面向对象分析（OOA）、 面向对象设计（OOD）、面向对象程序设计（OOP）等新的系统开发方式模型的研究。</p>
+<p>对 Java 语言来说，一切皆是对象。把现实世界中的对象抽象地体现在编程世界中，一个对象代表了某个具体的操作。一个个对象最终组成了完整的程序设计，这些对象可以是独立存在的，也可以是从别的对象继承过来的。对象之间通过相互作用传递信息，实现程序开发。</p>
+<h4 id="对象的概念"><a href="#对象的概念" class="headerlink" title="对象的概念"></a>对象的概念</h4><p>Java 是面向对象的编程语言，对象就是面向对象程序设计的核心。所谓对象就是真实世界中的实体，对象与实体是一一对应的，也就是说现实世界中每一个实体都是一个对象，它是一种具体的概念。对象有以下特点：</p>
+<ul>
+<li>对象具有属性和行为。</li>
+<li>对象具有变化的状态。</li>
+<li>对象具有唯一性。</li>
+<li>对象都是某个类别的实例。</li>
+</ul>
+<p><strong>一切皆为对象，真实世界中的所有事物都可以视为对象</strong><br>面向对象的三大核心特性<br>面向对象开发模式更有利于人们开拓思维，在具体的开发过程中便于程序的划分，方便程序员分工合作，提高开发效率。面向对象程序设计有以下优点。</p>
+<ul>
+<li>可重用性：它是面向对象软件开发的核心思路，提高了开发效率。面向对象程序设计的抽象、继承、封装和多态四大特点都围绕这个核心。</li>
+<li>可扩展性：它使面向对象设计脱离了基于模块的设计，便于软件的修改。</li>
+<li>可管理性：能够将功能与数据结合，方便管理。</li>
+</ul>
+<p>该开发模式之所以使程序设计更加完善和强大，主要是因为面向对象具有继承、封装和多态 3 个核心特性。</p>
+<h4 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h4><p>如同生活中的子女继承父母拥有的所有财产，程序中的继承性是指子类拥有父类数据结构的方法和机制，这是类之间的一种关系；<strong>继承只能是单继承</strong>。</p>
+<h4 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h4><p>封装是将代码及其处理的数据绑定在一起的一种编程机制，该机制保证了程序和数据都不受外部干扰且不被误用。<br>封装的目的在于保护信息，使用它的主要优点如下。</p>
+<ul>
+<li>保护类中的信息，它可以阻止在外部定义的代码随意访问内部代码和数据。</li>
+<li>隐藏细节信息，一些不需要程序员修改和使用的信息，比如取款机中的键盘，用户只需要知道按哪个键实现什么操作就可以，至于它内部是如何运行的，用户不需要知道。<br>有助于建立各个系统之间的松耦合关系，提高系统的独立性。当一个系统的实现方式发生变化时，只要它的接口不变，就不会影响其他系统的使用。例如 U 盘，不管里面的存储方式怎么改变，只要 U 盘上的 USB 接口不变，就不会影响用户的正常操作。</li>
+<li>提高软件的复用率，降低成本。每个系统都是一个相对独立的整体，可以在不同的环境中得到使用。例如，一个 U 盘可以在多台电脑上使用。</li>
+</ul>
+<p><strong>Java 语言的基本封装单位是类</strong>。由于类的用途是封装复杂性，所以类的内部有隐藏实现复杂性的机制。Java 提供了私有和公有的访问模式，类的公有接口代表外部的用户应该知道或可以知道的每件东西，私有的方法数据只能通过该类的成员代码来访问，这就可以确保不会发生不希望的事情。</p>
+<h4 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h4><p>面向对象的多态性，即“<strong>一个接口，多个方法</strong>”。多态性体现在父类中定义的属性和方法被子类继承后，可以具有不同的属性或表现方式。多态性允许一个接口被多个同类使用，弥补了单继承的不足。</p>
+<h3 id="类的定义规则（注意事项）"><a href="#类的定义规则（注意事项）" class="headerlink" title="类的定义规则（注意事项）"></a>类的定义规则（注意事项）</h3><h4 id="留白"><a href="#留白" class="headerlink" title="留白"></a>留白</h4><hr>
+<p>—持续更新—</p>
 
       
     </div>
@@ -707,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java学习笔记（易错细节）持续更新"><span class="nav-number">1.</span> <span class="nav-text">Java学习笔记（易错细节）持续更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符（-amp-单个双个区别）"><span class="nav-number">1.1.</span> <span class="nav-text">逻辑运算符（&amp;|单个双个区别）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自增自减区分"><span class="nav-number">1.2.</span> <span class="nav-text">自增自减区分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的操作"><span class="nav-number">1.3.</span> <span class="nav-text">数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组扩容："><span class="nav-number">1.3.1.</span> <span class="nav-text">数组扩容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arraycopy数组复制"><span class="nav-number">1.3.2.</span> <span class="nav-text">arraycopy数组复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Arrays-copyOf数组复制"><span class="nav-number">1.3.3.</span> <span class="nav-text">Arrays.copyOf数组复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比"><span class="nav-number">1.3.4.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组排序"><span class="nav-number">1.4.</span> <span class="nav-text">数组排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Arrays-sort排序"><span class="nav-number">1.4.1.</span> <span class="nav-text">Arrays.sort排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降序-冒泡"><span class="nav-number">1.4.2.</span> <span class="nav-text">降序(冒泡)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多（陆续更新）"><span class="nav-number">1.4.3.</span> <span class="nav-text">更多（陆续更新）</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java学习笔记（易错细节）持续更新"><span class="nav-number">1.</span> <span class="nav-text">Java学习笔记（易错细节）持续更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑运算符（-amp-单个双个区别）"><span class="nav-number">2.</span> <span class="nav-text">逻辑运算符（&amp;|单个双个区别）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自增自减区分"><span class="nav-number">3.</span> <span class="nav-text">自增自减区分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的操作"><span class="nav-number">4.</span> <span class="nav-text">数组的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组扩容："><span class="nav-number">4.1.</span> <span class="nav-text">数组扩容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arraycopy数组复制"><span class="nav-number">4.2.</span> <span class="nav-text">arraycopy数组复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Arrays-copyOf数组复制"><span class="nav-number">4.3.</span> <span class="nav-text">Arrays.copyOf数组复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比"><span class="nav-number">4.4.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组排序"><span class="nav-number">5.</span> <span class="nav-text">数组排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Arrays-sort排序"><span class="nav-number">5.1.</span> <span class="nav-text">Arrays.sort排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降序-冒泡"><span class="nav-number">5.2.</span> <span class="nav-text">降序(冒泡)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多（陆续更新）"><span class="nav-number">5.3.</span> <span class="nav-text">更多（陆续更新）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OOP面向对象编程（转）"><span class="nav-number">6.</span> <span class="nav-text">OOP面向对象编程（转）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#梗概："><span class="nav-number">6.1.</span> <span class="nav-text">梗概：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象的概念"><span class="nav-number">6.2.</span> <span class="nav-text">对象的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承性"><span class="nav-number">6.3.</span> <span class="nav-text">继承性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装性"><span class="nav-number">6.4.</span> <span class="nav-text">封装性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态性"><span class="nav-number">6.5.</span> <span class="nav-text">多态性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的定义规则（注意事项）"><span class="nav-number">7.</span> <span class="nav-text">类的定义规则（注意事项）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#留白"><span class="nav-number">7.1.</span> <span class="nav-text">留白</span></a></li></ol></li></ol></div>
             
 
           </div>
